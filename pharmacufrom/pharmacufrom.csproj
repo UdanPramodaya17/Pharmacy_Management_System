@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56042793-133A-4459-8D0D-168989D55CA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pharmacufrom</RootNamespace>
+    <AssemblyName>pharmacufrom</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfirmTender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmTender.Designer.cs">
+      <DependentUpon>ConfirmTender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="drugfrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="drugfrom.Designer.cs">
+      <DependentUpon>drugfrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturingPlant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManufacturingPlant.Designer.cs">
+      <DependentUpon>ManufacturingPlant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturingPlantdrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManufacturingPlantdrug.Designer.cs">
+      <DependentUpon>ManufacturingPlantdrug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturingPlantRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManufacturingPlantRegistration.Designer.cs">
+      <DependentUpon>ManufacturingPlantRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pharmacy.Designer.cs">
+      <DependentUpon>pharmacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacyRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PharmacyRegistration.Designer.cs">
+      <DependentUpon>PharmacyRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendTender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendTender.Designer.cs">
+      <DependentUpon>SendTender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPC.Designer.cs">
+      <DependentUpon>SPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPCOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPCOrderForm.Designer.cs">
+      <DependentUpon>SPCOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierFrom.Designer.cs">
+      <DependentUpon>SupplierFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierMain.Designer.cs">
+      <DependentUpon>SupplierMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierView.Designer.cs">
+      <DependentUpon>SupplierView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseStaff.Designer.cs">
+      <DependentUpon>WarehouseStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseStaffdrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseStaffdrugs.Designer.cs">
+      <DependentUpon>WarehouseStaffdrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseStaffRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseStaffRegistration.Designer.cs">
+      <DependentUpon>WarehouseStaffRegistration.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConfirmTender.resx">
+      <DependentUpon>ConfirmTender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drugfrom.resx">
+      <DependentUpon>drugfrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManufacturingPlant.resx">
+      <DependentUpon>ManufacturingPlant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManufacturingPlantdrug.resx">
+      <DependentUpon>ManufacturingPlantdrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManufacturingPlantRegistration.resx">
+      <DependentUpon>ManufacturingPlantRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pharmacy.resx">
+      <DependentUpon>pharmacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacyRegistration.resx">
+      <DependentUpon>PharmacyRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SendTender.resx">
+      <DependentUpon>SendTender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPC.resx">
+      <DependentUpon>SPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPCOrderForm.resx">
+      <DependentUpon>SPCOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierFrom.resx">
+      <DependentUpon>SupplierFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierMain.resx">
+      <DependentUpon>SupplierMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierView.resx">
+      <DependentUpon>SupplierView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseStaff.resx">
+      <DependentUpon>WarehouseStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseStaffdrugs.resx">
+      <DependentUpon>WarehouseStaffdrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseStaffRegistration.resx">
+      <DependentUpon>WarehouseStaffRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.AddOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.GetAllOrdersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.GetDrugNameByStockIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.GetPharmacyDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.GetPlantDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.GetStockDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.GetTendersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.GetWarehouseStaffDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.InsertNewPharmacyWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.InsertNewPlantWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.InsertNewsstockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.InsertNewStaffWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.InsertsupplierWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.InsertTenderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.ManufacturingPlant.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.Pharmacy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.PharmacyLoginWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.PlantLoginWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.SearchSupplierWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.Stock.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.Supplier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.SupplierLoginWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.Tender.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.UpdatePharmacyWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.UpdatePlantWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.UpdateStaffWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.UpdateStockWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.UpdateSupplierWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.WarehouseStaff.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\pharmacufrom.ServiceReference1.WarehouseStaffLoginWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\web.wsdl" />
+    <None Include="Connected Services\ServiceReference2\pharmacufrom.ServiceReference2.InsertdrugWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\pharmacufrom.ServiceReference2.InsertquatationDetailWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\pharmacufrom.ServiceReference2.InsertQuatationWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\pharmacufrom.ServiceReference2.InsertsupplierWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\pharmacyWebService.wsdl" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\pharmacyWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\web.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-alexandros-chatzidimos-2033032-3652750.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-alexandros-chatzidimos-2033032-36527501.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wallpaper Medical.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1b6782a413b2f6bd68d330365ecd0a0a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f5a49d6c59f7287f510a5f298f106f80.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in-stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conveyor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grouping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1e09dbec1196e7fcd00704f00e013397.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5d742f39c9a8e5be99d622e98c00de72.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74cbdb7e7f78c3081211dac3129d3b49.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1e09dbec1196e7fcd00704f00e0133971.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d0efa1ae18c85495573fcbc68009ddb0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6b0f65d9d1be4d6ddd9c26d80929c88c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d0efa1ae18c85495573fcbc68009ddb01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in-stock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cargo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delivery-courier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meeting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81a984ed0844db34aa0d4cdbe81b38bc.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

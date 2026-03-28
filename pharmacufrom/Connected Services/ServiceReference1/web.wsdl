@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsertsupplierWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="supplierid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="suppliername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplieraddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplieremail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Suppliercontact_number" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SupplierPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertsupplierWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertsupplierWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSupplierWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="supplierid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="suppliername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplieraddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplieremail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Suppliercontact_number" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SupplierPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSupplierWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSupplierWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSupplierWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="supplierid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSupplierWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteSupplierWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchSupplierWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="supplierid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchSupplierWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchSupplierWebResult" type="tns:Supplier" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Supplier">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="suplierId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="contact_number" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SupplierLoginWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="supplierName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplierpass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SupplierLoginWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SupplierLoginWebResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewsstock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="drugName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="manufacturer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addedBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewsstockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertNewsstockResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStockWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="stockId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="drugName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="manufacturer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addedBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStockWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateStockWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteStockWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="stockId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteStockWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteStockWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStockDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockDataResult" type="tns:ArrayOfStock" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStock">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Stock" nillable="true" type="tns:Stock" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Stock">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StockId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrugName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Manufacturer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AddedDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertNewPharmacyWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="verifyPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewPharmacyWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertNewPharmacyWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePharmacyWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pharmacyID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pharmacyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="verifyPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePharmacyWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePharmacyWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePharmacyWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pharmacyID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePharmacyWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeletePharmacyWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPharmacyData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPharmacyDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPharmacyDataResult" type="tns:ArrayOfPharmacy" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPharmacy">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Pharmacy" nillable="true" type="tns:Pharmacy" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Pharmacy">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PharmacyID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PharmacyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VerifyPassword" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PharmacyLoginWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PharmacyLoginWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PharmacyLoginWebResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitPriceByStockId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="stockId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnitPriceByStockIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUnitPriceByStockIdResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugNameByStockId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="stockId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrugNameByStockIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDrugNameByStockIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="stockId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="drugName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitPrice" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalPrice" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOrderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteOrderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllOrders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllOrdersResult" type="tns:ArrayOfOrder" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Order" nillable="true" type="tns:Order" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Order">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StockId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrugName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertTender">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="supplierId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenderDrugName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tenderAmount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="tenderQuantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tenderDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertTenderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertTenderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTenders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTendersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTendersResult" type="tns:ArrayOfTender" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTender">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Tender" nillable="true" type="tns:Tender" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Tender">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TenderId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SupplierId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenderDrugName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TenderAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TenderQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TenderDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenderStatus" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConfirmTender">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tenderId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmTenderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmTenderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewPlantWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="plantName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contactNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewPlantWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertNewPlantWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePlantWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="plantID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="plantName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contactNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePlantWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePlantWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePlantWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="plantID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePlantWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeletePlantWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlantData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPlantDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlantDataResult" type="tns:ArrayOfManufacturingPlant" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfManufacturingPlant">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ManufacturingPlant" nillable="true" type="tns:ManufacturingPlant" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ManufacturingPlant">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PlantID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContactNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PlantLoginWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PlantLoginWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PlantLoginWebResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewStaffWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="position" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contactNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewStaffWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertNewStaffWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStaffWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="staffID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="position" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contactNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStaffWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateStaffWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteStaffWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="staffID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteStaffWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteStaffWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWarehouseStaffData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWarehouseStaffDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWarehouseStaffDataResult" type="tns:ArrayOfWarehouseStaff" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWarehouseStaff">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WarehouseStaff" nillable="true" type="tns:WarehouseStaff" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WarehouseStaff">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StaffID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Position" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContactNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WarehouseStaffLoginWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WarehouseStaffLoginWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WarehouseStaffLoginWebResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertsupplierWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertsupplierWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertsupplierWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertsupplierWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSupplierWebSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSupplierWeb" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSupplierWebSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSupplierWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSupplierWebSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSupplierWeb" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSupplierWebSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSupplierWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSupplierWebSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchSupplierWeb" />
+  </wsdl:message>
+  <wsdl:message name="SearchSupplierWebSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchSupplierWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="SupplierLoginWebSoapIn">
+    <wsdl:part name="parameters" element="tns:SupplierLoginWeb" />
+  </wsdl:message>
+  <wsdl:message name="SupplierLoginWebSoapOut">
+    <wsdl:part name="parameters" element="tns:SupplierLoginWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewsstockSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNewsstock" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewsstockSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNewsstockResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStockWebSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStockWeb" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStockWebSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStockWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteStockWebSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteStockWeb" />
+  </wsdl:message>
+  <wsdl:message name="DeleteStockWebSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteStockWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockData" />
+  </wsdl:message>
+  <wsdl:message name="GetStockDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewPharmacyWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNewPharmacyWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewPharmacyWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNewPharmacyWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePharmacyWebSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePharmacyWeb" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePharmacyWebSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePharmacyWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePharmacyWebSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePharmacyWeb" />
+  </wsdl:message>
+  <wsdl:message name="DeletePharmacyWebSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePharmacyWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPharmacyDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPharmacyData" />
+  </wsdl:message>
+  <wsdl:message name="GetPharmacyDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPharmacyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="PharmacyLoginWebSoapIn">
+    <wsdl:part name="parameters" element="tns:PharmacyLoginWeb" />
+  </wsdl:message>
+  <wsdl:message name="PharmacyLoginWebSoapOut">
+    <wsdl:part name="parameters" element="tns:PharmacyLoginWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitPriceByStockIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnitPriceByStockId" />
+  </wsdl:message>
+  <wsdl:message name="GetUnitPriceByStockIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnitPriceByStockIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugNameByStockIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrugNameByStockId" />
+  </wsdl:message>
+  <wsdl:message name="GetDrugNameByStockIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDrugNameByStockIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="DeleteOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetAllOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertTenderSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertTender" />
+  </wsdl:message>
+  <wsdl:message name="InsertTenderSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertTenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTendersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTenders" />
+  </wsdl:message>
+  <wsdl:message name="GetTendersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTendersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTenderSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmTender" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTenderSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmTenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewPlantWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNewPlantWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewPlantWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNewPlantWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePlantWebSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePlantWeb" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePlantWebSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePlantWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePlantWebSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePlantWeb" />
+  </wsdl:message>
+  <wsdl:message name="DeletePlantWebSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePlantWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlantDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlantData" />
+  </wsdl:message>
+  <wsdl:message name="GetPlantDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlantDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="PlantLoginWebSoapIn">
+    <wsdl:part name="parameters" element="tns:PlantLoginWeb" />
+  </wsdl:message>
+  <wsdl:message name="PlantLoginWebSoapOut">
+    <wsdl:part name="parameters" element="tns:PlantLoginWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewStaffWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNewStaffWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewStaffWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNewStaffWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStaffWebSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStaffWeb" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStaffWebSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStaffWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteStaffWebSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteStaffWeb" />
+  </wsdl:message>
+  <wsdl:message name="DeleteStaffWebSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteStaffWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseStaffDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWarehouseStaffData" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseStaffDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWarehouseStaffDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="WarehouseStaffLoginWebSoapIn">
+    <wsdl:part name="parameters" element="tns:WarehouseStaffLoginWeb" />
+  </wsdl:message>
+  <wsdl:message name="WarehouseStaffLoginWebSoapOut">
+    <wsdl:part name="parameters" element="tns:WarehouseStaffLoginWebResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="InsertsupplierWeb">
+      <wsdl:input message="tns:InsertsupplierWebSoapIn" />
+      <wsdl:output message="tns:InsertsupplierWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupplierWeb">
+      <wsdl:input message="tns:UpdateSupplierWebSoapIn" />
+      <wsdl:output message="tns:UpdateSupplierWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSupplierWeb">
+      <wsdl:input message="tns:DeleteSupplierWebSoapIn" />
+      <wsdl:output message="tns:DeleteSupplierWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSupplierWeb">
+      <wsdl:input message="tns:SearchSupplierWebSoapIn" />
+      <wsdl:output message="tns:SearchSupplierWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SupplierLoginWeb">
+      <wsdl:input message="tns:SupplierLoginWebSoapIn" />
+      <wsdl:output message="tns:SupplierLoginWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewsstock">
+      <wsdl:input message="tns:InsertNewsstockSoapIn" />
+      <wsdl:output message="tns:InsertNewsstockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStockWeb">
+      <wsdl:input message="tns:UpdateStockWebSoapIn" />
+      <wsdl:output message="tns:UpdateStockWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStockWeb">
+      <wsdl:input message="tns:DeleteStockWebSoapIn" />
+      <wsdl:output message="tns:DeleteStockWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockData">
+      <wsdl:input message="tns:GetStockDataSoapIn" />
+      <wsdl:output message="tns:GetStockDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewPharmacyWeb">
+      <wsdl:input message="tns:InsertNewPharmacyWebSoapIn" />
+      <wsdl:output message="tns:InsertNewPharmacyWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePharmacyWeb">
+      <wsdl:input message="tns:UpdatePharmacyWebSoapIn" />
+      <wsdl:output message="tns:UpdatePharmacyWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePharmacyWeb">
+      <wsdl:input message="tns:DeletePharmacyWebSoapIn" />
+      <wsdl:output message="tns:DeletePharmacyWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPharmacyData">
+      <wsdl:input message="tns:GetPharmacyDataSoapIn" />
+      <wsdl:output message="tns:GetPharmacyDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PharmacyLoginWeb">
+      <wsdl:input message="tns:PharmacyLoginWebSoapIn" />
+      <wsdl:output message="tns:PharmacyLoginWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitPriceByStockId">
+      <wsdl:input message="tns:GetUnitPriceByStockIdSoapIn" />
+      <wsdl:output message="tns:GetUnitPriceByStockIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugNameByStockId">
+      <wsdl:input message="tns:GetDrugNameByStockIdSoapIn" />
+      <wsdl:output message="tns:GetDrugNameByStockIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <wsdl:input message="tns:AddOrderSoapIn" />
+      <wsdl:output message="tns:AddOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <wsdl:input message="tns:DeleteOrderSoapIn" />
+      <wsdl:output message="tns:DeleteOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <wsdl:input message="tns:GetAllOrdersSoapIn" />
+      <wsdl:output message="tns:GetAllOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTender">
+      <wsdl:input message="tns:InsertTenderSoapIn" />
+      <wsdl:output message="tns:InsertTenderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTenders">
+      <wsdl:input message="tns:GetTendersSoapIn" />
+      <wsdl:output message="tns:GetTendersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTender">
+      <wsdl:input message="tns:ConfirmTenderSoapIn" />
+      <wsdl:output message="tns:ConfirmTenderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewPlantWeb">
+      <wsdl:input message="tns:InsertNewPlantWebSoapIn" />
+      <wsdl:output message="tns:InsertNewPlantWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlantWeb">
+      <wsdl:input message="tns:UpdatePlantWebSoapIn" />
+      <wsdl:output message="tns:UpdatePlantWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlantWeb">
+      <wsdl:input message="tns:DeletePlantWebSoapIn" />
+      <wsdl:output message="tns:DeletePlantWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantData">
+      <wsdl:input message="tns:GetPlantDataSoapIn" />
+      <wsdl:output message="tns:GetPlantDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PlantLoginWeb">
+      <wsdl:input message="tns:PlantLoginWebSoapIn" />
+      <wsdl:output message="tns:PlantLoginWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewStaffWeb">
+      <wsdl:input message="tns:InsertNewStaffWebSoapIn" />
+      <wsdl:output message="tns:InsertNewStaffWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaffWeb">
+      <wsdl:input message="tns:UpdateStaffWebSoapIn" />
+      <wsdl:output message="tns:UpdateStaffWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStaffWeb">
+      <wsdl:input message="tns:DeleteStaffWebSoapIn" />
+      <wsdl:output message="tns:DeleteStaffWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseStaffData">
+      <wsdl:input message="tns:GetWarehouseStaffDataSoapIn" />
+      <wsdl:output message="tns:GetWarehouseStaffDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WarehouseStaffLoginWeb">
+      <wsdl:input message="tns:WarehouseStaffLoginWebSoapIn" />
+      <wsdl:output message="tns:WarehouseStaffLoginWebSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertsupplierWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertsupplierWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupplierWeb">
+      <soap:operation soapAction="http://tempuri.org/UpdateSupplierWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSupplierWeb">
+      <soap:operation soapAction="http://tempuri.org/DeleteSupplierWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSupplierWeb">
+      <soap:operation soapAction="http://tempuri.org/SearchSupplierWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierLoginWeb">
+      <soap:operation soapAction="http://tempuri.org/SupplierLoginWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewsstock">
+      <soap:operation soapAction="http://tempuri.org/InsertNewsstock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStockWeb">
+      <soap:operation soapAction="http://tempuri.org/UpdateStockWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStockWeb">
+      <soap:operation soapAction="http://tempuri.org/DeleteStockWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockData">
+      <soap:operation soapAction="http://tempuri.org/GetStockData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewPharmacyWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertNewPharmacyWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePharmacyWeb">
+      <soap:operation soapAction="http://tempuri.org/UpdatePharmacyWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePharmacyWeb">
+      <soap:operation soapAction="http://tempuri.org/DeletePharmacyWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPharmacyData">
+      <soap:operation soapAction="http://tempuri.org/GetPharmacyData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PharmacyLoginWeb">
+      <soap:operation soapAction="http://tempuri.org/PharmacyLoginWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitPriceByStockId">
+      <soap:operation soapAction="http://tempuri.org/GetUnitPriceByStockId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugNameByStockId">
+      <soap:operation soapAction="http://tempuri.org/GetDrugNameByStockId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap:operation soapAction="http://tempuri.org/AddOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <soap:operation soapAction="http://tempuri.org/DeleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap:operation soapAction="http://tempuri.org/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTender">
+      <soap:operation soapAction="http://tempuri.org/InsertTender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTenders">
+      <soap:operation soapAction="http://tempuri.org/GetTenders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTender">
+      <soap:operation soapAction="http://tempuri.org/ConfirmTender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewPlantWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertNewPlantWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlantWeb">
+      <soap:operation soapAction="http://tempuri.org/UpdatePlantWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlantWeb">
+      <soap:operation soapAction="http://tempuri.org/DeletePlantWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantData">
+      <soap:operation soapAction="http://tempuri.org/GetPlantData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlantLoginWeb">
+      <soap:operation soapAction="http://tempuri.org/PlantLoginWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewStaffWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertNewStaffWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaffWeb">
+      <soap:operation soapAction="http://tempuri.org/UpdateStaffWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStaffWeb">
+      <soap:operation soapAction="http://tempuri.org/DeleteStaffWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseStaffData">
+      <soap:operation soapAction="http://tempuri.org/GetWarehouseStaffData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WarehouseStaffLoginWeb">
+      <soap:operation soapAction="http://tempuri.org/WarehouseStaffLoginWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertsupplierWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertsupplierWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSupplierWeb">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSupplierWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSupplierWeb">
+      <soap12:operation soapAction="http://tempuri.org/DeleteSupplierWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSupplierWeb">
+      <soap12:operation soapAction="http://tempuri.org/SearchSupplierWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SupplierLoginWeb">
+      <soap12:operation soapAction="http://tempuri.org/SupplierLoginWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewsstock">
+      <soap12:operation soapAction="http://tempuri.org/InsertNewsstock" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStockWeb">
+      <soap12:operation soapAction="http://tempuri.org/UpdateStockWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStockWeb">
+      <soap12:operation soapAction="http://tempuri.org/DeleteStockWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockData">
+      <soap12:operation soapAction="http://tempuri.org/GetStockData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewPharmacyWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertNewPharmacyWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePharmacyWeb">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePharmacyWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePharmacyWeb">
+      <soap12:operation soapAction="http://tempuri.org/DeletePharmacyWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPharmacyData">
+      <soap12:operation soapAction="http://tempuri.org/GetPharmacyData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PharmacyLoginWeb">
+      <soap12:operation soapAction="http://tempuri.org/PharmacyLoginWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitPriceByStockId">
+      <soap12:operation soapAction="http://tempuri.org/GetUnitPriceByStockId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrugNameByStockId">
+      <soap12:operation soapAction="http://tempuri.org/GetDrugNameByStockId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap12:operation soapAction="http://tempuri.org/AddOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <soap12:operation soapAction="http://tempuri.org/DeleteOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap12:operation soapAction="http://tempuri.org/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTender">
+      <soap12:operation soapAction="http://tempuri.org/InsertTender" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTenders">
+      <soap12:operation soapAction="http://tempuri.org/GetTenders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTender">
+      <soap12:operation soapAction="http://tempuri.org/ConfirmTender" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewPlantWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertNewPlantWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlantWeb">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePlantWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlantWeb">
+      <soap12:operation soapAction="http://tempuri.org/DeletePlantWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlantData">
+      <soap12:operation soapAction="http://tempuri.org/GetPlantData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlantLoginWeb">
+      <soap12:operation soapAction="http://tempuri.org/PlantLoginWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNewStaffWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertNewStaffWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaffWeb">
+      <soap12:operation soapAction="http://tempuri.org/UpdateStaffWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStaffWeb">
+      <soap12:operation soapAction="http://tempuri.org/DeleteStaffWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseStaffData">
+      <soap12:operation soapAction="http://tempuri.org/GetWarehouseStaffData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WarehouseStaffLoginWeb">
+      <soap12:operation soapAction="http://tempuri.org/WarehouseStaffLoginWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:57476/web.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:57476/web.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

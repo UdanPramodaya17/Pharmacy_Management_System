@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsertsupplierWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="suppliername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplieraddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplieremail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Suppliercontact_number" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Supplierregistration_date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertsupplierWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertsupplierWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertdrugWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Drug_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Drug_price" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Drug_status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertdrugWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertdrugWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertinventoryWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Drug_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity_in_stock" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Unit_price" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertinventoryWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertinventoryWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertorderWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Drug_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pharmacy_ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Unit_Price" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertorderWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertorderWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertQuatationWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Quatation_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Suppliername" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="supplierid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertQuatationWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertQuatationWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertquatationDetailWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Drug_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quatation_Quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quatation_Unit_Price" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quatation_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Drug_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertquatationDetailWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertquatationDetailWebResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertsupplierWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertsupplierWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertsupplierWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertsupplierWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertdrugWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertdrugWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertdrugWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertdrugWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertinventoryWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertinventoryWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertinventoryWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertinventoryWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertorderWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertorderWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertorderWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertorderWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertQuatationWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertQuatationWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertQuatationWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertQuatationWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertquatationDetailWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertquatationDetailWeb" />
+  </wsdl:message>
+  <wsdl:message name="InsertquatationDetailWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertquatationDetailWebResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="InsertsupplierWeb">
+      <wsdl:input message="tns:InsertsupplierWebSoapIn" />
+      <wsdl:output message="tns:InsertsupplierWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertdrugWeb">
+      <wsdl:input message="tns:InsertdrugWebSoapIn" />
+      <wsdl:output message="tns:InsertdrugWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertinventoryWeb">
+      <wsdl:input message="tns:InsertinventoryWebSoapIn" />
+      <wsdl:output message="tns:InsertinventoryWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertorderWeb">
+      <wsdl:input message="tns:InsertorderWebSoapIn" />
+      <wsdl:output message="tns:InsertorderWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuatationWeb">
+      <wsdl:input message="tns:InsertQuatationWebSoapIn" />
+      <wsdl:output message="tns:InsertQuatationWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertquatationDetailWeb">
+      <wsdl:input message="tns:InsertquatationDetailWebSoapIn" />
+      <wsdl:output message="tns:InsertquatationDetailWebSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertsupplierWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertsupplierWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertdrugWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertdrugWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertinventoryWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertinventoryWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertorderWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertorderWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuatationWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertQuatationWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertquatationDetailWeb">
+      <soap:operation soapAction="http://tempuri.org/InsertquatationDetailWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertsupplierWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertsupplierWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertdrugWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertdrugWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertinventoryWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertinventoryWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertorderWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertorderWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertQuatationWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertQuatationWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertquatationDetailWeb">
+      <soap12:operation soapAction="http://tempuri.org/InsertquatationDetailWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:57476/pharmacyWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:57476/pharmacyWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

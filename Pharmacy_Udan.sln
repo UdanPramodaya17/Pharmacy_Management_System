@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35706.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy_Udan", "Pharmacy_Udan\Pharmacy_Udan.csproj", "{04B442B7-FEA3-44DE-AEB4-0CA86E4F31A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pharmacufrom", "pharmacufrom\pharmacufrom.csproj", "{56042793-133A-4459-8D0D-168989D55CA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{04B442B7-FEA3-44DE-AEB4-0CA86E4F31A6} = {04B442B7-FEA3-44DE-AEB4-0CA86E4F31A6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04B442B7-FEA3-44DE-AEB4-0CA86E4F31A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B442B7-FEA3-44DE-AEB4-0CA86E4F31A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B442B7-FEA3-44DE-AEB4-0CA86E4F31A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B442B7-FEA3-44DE-AEB4-0CA86E4F31A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56042793-133A-4459-8D0D-168989D55CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56042793-133A-4459-8D0D-168989D55CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56042793-133A-4459-8D0D-168989D55CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56042793-133A-4459-8D0D-168989D55CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88065B41-8888-47CC-9418-D53852115553}
+	EndGlobalSection
+EndGlobal
